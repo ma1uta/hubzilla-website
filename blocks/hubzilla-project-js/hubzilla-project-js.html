@@ -33,6 +33,20 @@ $('.navbar-collapse ul li a').click(function() {
     $(".navbar-collapse").collapse('hide');
 });
 
+$(document).ready(function(){
+	
+	var userLang = navigator.languages
+		? navigator.languages[0]
+		: (navigator.language || navigator.userLanguage);
+	if(	userLang !== 'en' &&
+		userLang !== 'de' ) {
+		userLang = 'en';
+	}
+	// If JavaScript is not enabled, at least the English text should display
+	// in some form even if the style and navigation is broken.
+	$('.hz-lang-en').hide();
+	$('.hz-lang-'+userLang).show();
+});
 
 function init() {
 }
