@@ -1,1 +1,7 @@
-{"title":"Hubzilla","pagelink":"hubzilla","mimetype":"text/html","layout":"minimal-layout","contentfile":"hubzilla-project.html"}
+{
+	"title":"Hubzilla",
+	"pagelink":"hubzilla-project",
+	"mimetype":"text/html",
+	"layout":"hubzilla-project-layout",
+	"contentfile":"hubzilla-project.html"
+}
