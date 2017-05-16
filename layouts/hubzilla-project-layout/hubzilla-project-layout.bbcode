@@ -11,9 +11,17 @@
 	[comment]
 		Render content translated to the automatically detected language of the observer
 	[/comment]
-	[block][var=wrap]none[/var]hubzilla-project-lang-en[/block]
-	[block][var=wrap]none[/var]hubzilla-project-lang-de[/block]
-
+	[switch observer.language]
+	[case de]
+		[block][var=wrap]none[/var]hubzilla-project-lang-de[/block]
+	[/case]
+	[case es]
+		[block][var=wrap]none[/var]hubzilla-project-lang-es[/block]
+	[/case]
+	[default]
+		[block][var=wrap]none[/var]hubzilla-project-lang-en[/block]
+	[/default]
+	[/switch]
 	[comment]
 		Include the JavaScript
 	[/comment]
