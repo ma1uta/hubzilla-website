@@ -1,0 +1,36 @@
+<script>
+	$(document).ready(function () {
+		var path = window.location.pathname.split('/');
+		var pathParts = [];
+		for (var i = 0; i < path.length; i++) {
+			if (path[i].length > 0) {
+				pathParts.push(path[i]);
+			}
+		}
+		var langFromURL = '';
+		var pageName = '';
+		switch (pathParts.length) {
+			case 3:
+				pageName = pathParts[2];
+				break;
+			case 4:
+				langFromURL = pathParts[2];
+				pageName = pathParts[3];
+				$('.lang-selector').find('.lang-choice:contains("' + langFromURL + '")').removeClass('btn-default').addClass('btn-primary');
+				break;
+			default:
+				window.console.log('Invalid webpage path.')
+				return false;
+		}
+		var langChoices = [];
+		$('.lang-selector').find('.lang-choice').each(function (idx, a) {
+			langChoices.push($(a).html());
+		});
+		$('.lang-selector').find('.lang-choice').each(function (idx, a) {
+			var langLink = [];
+			langLink.push(pathParts[0], pathParts[1], $(a).html(), pageName);
+			$(a).attr('href', '/' + langLink.join('/'));
+			//window.console.log('a href: ' + $(a).attr('href'));
+		});
+	});
+</script>
