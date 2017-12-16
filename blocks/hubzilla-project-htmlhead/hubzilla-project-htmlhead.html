@@ -72,18 +72,22 @@
 	}
 
 	a {
-		color: #66512c;// #42dca3;
 		-webkit-transition: all .2s ease-in-out;
 		-moz-transition: all .2s ease-in-out;
 		transition: all .2s ease-in-out;
 	}
+p > a {
+		color:#AFB0D0;
+		//font-weight: bold;
+//text-decoration: underline;
+	
+}
 
 	a:hover,
 	a:focus {
-		text-decoration: none;
-		color: #7c6335; //#bb9b62; // #66512c ; // #1d9b6c;
+		text-decoration: underline;
+		color: #AFB0D0; // #66512c ; // #1d9b6c;
 	}
-
 	img.hubzillabanner {
 		display: block;
 		margin-left: auto;
@@ -547,6 +551,11 @@
 		-o-transform: rotate(-6deg);
 		-moz-transform:rotate(-6deg);
 	}
-	@media(min-width:767px) {
+	@media(max-width:767px) {
+
+	.intro-body {
+		padding-top: 8em;
+		padding-bottom: 1em;
+	}
 	}
 </style>
